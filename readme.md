@@ -1,10 +1,10 @@
-# Atopic Dermatitis Treatment Patterns — Synthetic EHR Cohort
+# Atopic Dermatitis Treatment Patterns - Synthetic EHR Cohort
 
 ![Swimmer Plot](figures/plot3_swimmer_plot.png)
 
 A descriptive real-world evidence (RWE) study built on synthetic EHR data from
 [Synthea](https://synthea.mitre.org/). The project traces treatment patterns
-across 25 AD patients — from first antihistamine prescription through topical
+across 25 AD patients - from first antihistamine prescription through topical
 steroids and, in a small number of cases, systemic immunosuppression.
 
 This is not a statistical inference study. The goal is to demonstrate the full
@@ -20,8 +20,8 @@ classification, and clinical visualization.
 | `sql/` | Schema creation, QC checks, constraint/index setup, data fixes, cohort and classification views |
 | `data/` | Analytical CSVs exported from PostgreSQL for R |
 | `figures/` | Rendered plot outputs |
-| `report/` | Quarto report (`.qmd`) — the main deliverable |
-| `docs/` | Rendered HTML report — served via GitHub Pages *(auto-generated, do not edit)* |
+| `report/` | Quarto report (`.qmd`) - the main deliverable |
+| `docs/` | Rendered HTML report - served via GitHub Pages *(auto-generated, do not edit)* |
 
 ---
 
@@ -40,8 +40,8 @@ classification, and clinical visualization.
 
 ## Report
 
-The full analysis — including data quality notes, analytical assumptions,
-investigation findings, and visualizations — is available as a rendered report:
+The full analysis - including data quality notes, analytical assumptions,
+investigation findings, and visualizations - is available as a rendered report:
 https://s-yadav21.github.io/ehr_analytics/
 
 ---
@@ -50,8 +50,8 @@ https://s-yadav21.github.io/ehr_analytics/
 
 Two tables required cleaning before analysis:
 
-- **Observations** — 249 fully duplicate rows removed
-- **Medications** — 24 duplicate rows (differing only in cost columns) removed;
+- **Observations** - 249 fully duplicate rows removed
+- **Medications** - 24 duplicate rows (differing only in cost columns) removed;
   date anomalies corrected
 
 Original tables preserved as `medications_original` and `observations_original`
