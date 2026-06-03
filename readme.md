@@ -21,6 +21,7 @@ classification, and clinical visualization.
 | `data/` | Analytical CSVs exported from PostgreSQL for R |
 | `figures/` | Rendered plot outputs |
 | `report/` | Quarto report (`.qmd`) — the main deliverable |
+| `docs/` | Rendered HTML report — served via GitHub Pages *(auto-generated, do not edit)* |
 
 ---
 
@@ -34,6 +35,14 @@ classification, and clinical visualization.
 - Hydrocortisone and cyclosporine prescriptions were confirmed to AD-coded
   encounters; antihistamines were attributed to the broader atopic disease
   spectrum (AD + rhinitis co-occurrence)
+
+---
+
+## Report
+
+The full analysis — including data quality notes, analytical assumptions,
+investigation findings, and visualizations — is available as a rendered report:
+https://s-yadav21.github.io/ehr_analytics/
 
 ---
 
@@ -55,12 +64,12 @@ in the core schema. Full cleaning logic is in `sql/04_data_fixes.sql`.
 - **Database:** PostgreSQL (DBeaver)
 - **Analysis & Visualization:** R (tidyverse, ggalluvial, gtsummary, lubridate)
 - **Report:** Quarto (HTML, self-contained)
-- **Data:** Synthea v3 synthetic patient generator
+- **Data:** Synthea
 
 ---
 
 ## How to Reproduce
 
-1. Generate 1,000 patients using Synthea CLI
-2. Load CSVs into PostgreSQL using `sql/01_cohort_definition.sql` and related scripts
+1. Download 1,000 patients from Synthea Downloads Page.
+2. Load CSVs into PostgreSQL using `sql/01_create_schema.sql` and related scripts
 3. Run `quarto render report/ad_cohort_analysis.qmd`
