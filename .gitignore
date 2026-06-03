@@ -1,0 +1,5 @@
+# gitignore
+script/
+.snakemake/
+*.Rhistory
+*.RData
