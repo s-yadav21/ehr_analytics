@@ -1,5 +1,6 @@
 # gitignore
 script/
+data/patient_raw_data/*.csv
 .snakemake/
 *.Rhistory
 *.RData
